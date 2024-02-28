@@ -26,17 +26,14 @@ spec:
         targetRevision: HEAD
         helm:
           parameters:
-            # (4)
             - name: namespace
               value: 'preview-{{branch}}'
-            # (5)
             - name: version
               value: '{{head_sha}}'
-            # (6)
             - name: image
-              value: sample-kotlin-spring
+              value: k8s-preview 
             - name: name
-              value: sample-spring-kotlin
+              value: k8s-preview
       # (7)
       syncPolicy:
         automated:
